@@ -1,20 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { Search } from '../search/search';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  imports: [Search],
+  imports: [],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
-  isSearchOpen = signal(false);
+  openSearch = output<void>();
 
-  openSearch() {
-    this.isSearchOpen.set(true);
-  }
-
-  closeSearch() {
-    this.isSearchOpen.set(false);
+  onSearchClick() {
+    this.openSearch.emit();
   }
 }
