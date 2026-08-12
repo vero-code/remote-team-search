@@ -36,19 +36,15 @@
     border-radius: 24px;
     background-color: #F5F5F5;
     padding-inline: 20px;
+    outline: none;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.25px;
-    outline: none;
+    color: #2A3033;
 
     &::placeholder {
-      font-family: 'Roboto', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0.25px;
       color: #9AA1A6;
     }
   }
