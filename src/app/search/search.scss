@@ -37,11 +37,13 @@
 
     &--clear {
       position: absolute;
-      right: 14px;
+      right: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -52,7 +54,7 @@
     border-radius: 24px;
     background-color: #F5F5F5;
     padding-left: 20px;
-    padding-right: 44px;
+    padding-right: 48px;
     outline: none;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
