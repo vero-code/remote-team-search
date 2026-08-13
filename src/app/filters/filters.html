@@ -1,12 +1,9 @@
 <div class="filters__wrapper">
-  <fieldset class="filters__fieldset">
-    <legend class="filters__legend">Автор</legend>
-    <input 
-      type="text"
-      name="filters"
-      class="filters__input"
-      placeholder="Имя или должность"
-      aria-label="Имя или должность"
-    >
-  </fieldset>
+  <div class="filters__field">
+    <label for="author-input" class="filters__label">Автор</label>
+    <input id="author-input" type="text" name="filters" class="filters__input" placeholder="Имя или должность" aria-label="Имя или должность">
+    <button type="button" class="filters__btn filters__btn--me" aria-label="Я">
+      <img src="icons/me.svg" alt="" aria-hidden="true" class="filters__icon">
+    </button>
+  </div>
 </div>
