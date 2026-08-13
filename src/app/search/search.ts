@@ -8,6 +8,7 @@ import { Component, output, signal } from '@angular/core';
 })
 export class Search {
   closeSearch = output<void>();
+  openFilters = output<void>();
   query = signal('');
 
   onCloseClick() {
@@ -21,5 +22,9 @@ export class Search {
 
   onClear() {
     this.query.set('');
+  }
+
+  onFocus() {
+    this.openFilters.emit();
   }
 }
