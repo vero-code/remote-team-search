@@ -11,6 +11,7 @@
       aria-label="Поиск"
       [value]="query()"
       (input)="onInput($event)"
+      (focus)="onFocus()"
     >
     @if (query()) {
       <button type="button" class="search__btn search__btn--clear" aria-label="Очистить" (click)="onClear()">
