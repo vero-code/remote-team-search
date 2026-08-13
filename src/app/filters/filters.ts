@@ -12,4 +12,10 @@ export class Filters {
     { id: 'inHeaders', label: 'В заголовках', icon: 'icons/item.svg' },
     { id: 'strictSearch', label: 'Строгий поиск', icon: 'icons/item.svg' },
   ]
+
+  onlyOptions = [
+    { id: 'tags', label: 'Теги', icon: 'icons/item.svg' },
+    { id: 'requests', label: 'Просьбы', icon: 'icons/item.svg' },
+    { id: 'contact', label: 'Контакты', icon: 'icons/item.svg' },
+  ]
 }
