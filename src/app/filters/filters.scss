@@ -105,6 +105,15 @@
     opacity: 0.5;
   }
 
+  &__checkbox:checked + &__icon-box {
+    background-color: #2A3033;
+
+    .filters__check-icon {
+      filter: brightness(0) invert(1);
+      opacity: 1;
+    }
+  }
+
   &__item-text, &__subtitle {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
