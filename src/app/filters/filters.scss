@@ -77,6 +77,33 @@
     flex-direction: column;
   }
 
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 44px;
+    padding-inline: 12px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #F5F5F5;
+  }
+
   &__item-text, &__subtitle {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
