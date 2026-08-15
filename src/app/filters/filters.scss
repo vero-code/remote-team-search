@@ -12,6 +12,7 @@
   }
 
   &__field {
+    flex-shrink: 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -68,10 +69,6 @@
     }
   }
 
-  &__group {
-    background-color: #C8BEFF;
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -99,9 +96,13 @@
     justify-content: center;
     width: 32px;
     height: 32px;
-    border-radius: 20px;
-    overflow: hidden;
+    border-radius: 50%;
     background-color: #F5F5F5;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    opacity: 0.5;
   }
 
   &__item-text, &__subtitle {
