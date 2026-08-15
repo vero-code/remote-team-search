@@ -16,7 +16,9 @@
 </style>
 
 @if (isSearchOpen()) {
-  <app-search (closeSearch)="isSearchOpen.set(false)" (openFilters)="isFiltersOpen.set(true)"/>
+  <app-search 
+    (closeSearch)="closeAll()" 
+    (openFilters)="isFiltersOpen.set(true)"/>
 } @else {
   <app-header (openSearch)="isSearchOpen.set(true)" />
 }

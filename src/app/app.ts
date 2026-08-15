@@ -15,4 +15,9 @@ export class App {
 
   isSearchOpen = signal(false);
   isFiltersOpen = signal(false);
+
+  closeAll() {
+    this.isSearchOpen.set(false);
+    this.isFiltersOpen.set(false);
+  }
 }
