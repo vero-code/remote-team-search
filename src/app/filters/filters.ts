@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './filters.scss',
 })
 export class Filters {
+  author = signal<string>('');
+
+  onMeClick() {
+    this.author.set('Я');
+  }
+
   options = [
     { id: 'participant', label: 'Я участник', icon: 'icons/item.svg' },
     { id: 'inHeaders', label: 'В заголовках', icon: 'icons/item.svg' },
