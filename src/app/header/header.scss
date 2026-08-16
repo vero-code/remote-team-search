@@ -25,14 +25,16 @@
   }
 
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     background: transparent;
     border: none;
     padding: 0;
 
     &--menu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 24px;
       height: 24px;
     }
@@ -49,6 +51,20 @@
 
   &__nav {
     display: none;
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__icon {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
