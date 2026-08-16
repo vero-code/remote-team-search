@@ -1,20 +1,3 @@
-<style>
-  :host {
-    --gray-900: oklch(19.37% 0.006 300.98);
-  }
-
-  h1 {
-    color: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-  }
-</style>
-
 @if (isSearchOpen()) {
   <app-search 
     (closeSearch)="closeAll()" 

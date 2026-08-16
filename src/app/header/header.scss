@@ -53,7 +53,13 @@
 }
 
 @media (min-width: 768px) {
+  :host {
+    padding-inline: 16px 12px;
+  }
+
   .header {
+    gap: 16px;
+
     &__btn--menu {
       display: none;
     }
@@ -75,6 +81,10 @@
       .header__btn--avatar {
         order: 4;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
       }
     }
   }
