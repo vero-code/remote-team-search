@@ -14,10 +14,10 @@ export class Header {
   }
 
   pages = [
-    { id: 'links', label: 'Ссылки', icon: 'icons/item.svg', href: '#' },
-    { id: 'contacts', label: 'Контакты', icon: 'icons/item.svg', href: '#' },
-    { id: 'tags', label: 'Теги', icon: 'icons/item.svg', href: '#' },
-    { id: 'favorites', label: 'Избранное', icon: 'icons/item.svg', href: '#' },
-    { id: 'visits', label: 'Посещения', icon: 'icons/item.svg', href: '#' },
+    { id: 'links', label: 'Ссылки', icon: 'icons/links.svg', href: '#' },
+    { id: 'contacts', label: 'Контакты', icon: 'icons/contacts.svg', href: '#' },
+    { id: 'tags', label: 'Теги', icon: 'icons/tags.svg', href: '#' },
+    { id: 'favorites', label: 'Избранное', icon: 'icons/favorites.svg', href: '#' },
+    { id: 'visits', label: 'Посещения', icon: 'icons/visits.svg', href: '#' },
   ]
 }
