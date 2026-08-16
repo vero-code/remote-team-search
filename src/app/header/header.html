@@ -6,16 +6,26 @@
     <img src="icons/logo.svg" alt="Логотип" class="header__logo">
   </a>
 
-  <nav class="header__nav">
-    @for (page of pages; track page.id) {
-      <a [href]="page.href" class="header__nav-link">
-        <span class="header__nav-icon-box">
-          <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
-        </span>
-        <span class="header__nav-text">{{ page.label }}</span>
-      </a>
-    }
-  </nav>
+  @if (!isDesktopSearchOpen()) {
+    <nav class="header__nav">
+      @for (page of pages; track page.id) {
+        <a [href]="page.href" class="header__nav-link">
+          <span class="header__nav-icon-box">
+            <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
+          </span>
+          <span class="header__nav-text">{{ page.label }}</span>
+        </a>
+      }
+    </nav>
+  } @else {
+    <div class="header__search-inline">
+      <input
+        type="search"
+        class="header__search-input"
+        placeholder="Поиск..."
+        autofocus>
+    </div>
+  }
 </div>
 <div class="header__right">
   <button type="button" class="header__btn header__btn--plus" aria-label="Добавить">

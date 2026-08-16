@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +8,14 @@ import { Component, output } from '@angular/core';
 })
 export class Header {
   openSearch = output<void>();
+  isDesktopSearchOpen = signal(false);
 
   onSearchClick() {
-    this.openSearch.emit();
+    if (window.innerWidth >= 768) {
+      this.isDesktopSearchOpen.update(v => !v);
+    } else {
+      this.openSearch.emit();
+    }
   }
 
   pages = [
