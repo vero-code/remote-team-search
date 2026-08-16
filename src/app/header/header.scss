@@ -36,6 +36,10 @@
       width: 24px;
       height: 24px;
     }
+
+    &--avatar {
+      display: none;
+    }
   }
 
   &__logo-link {
@@ -67,6 +71,10 @@
       .header__btn--bell {
         order: 3;
         margin-left: auto;
+      }
+      .header__btn--avatar {
+        order: 4;
+        display: flex;
       }
     }
   }
