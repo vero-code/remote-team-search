@@ -18,6 +18,8 @@
   }
 
   &__right {
+    display: flex;
+    align-items: center;
     gap: 4px;
     height: 40px;
   }
@@ -46,7 +48,7 @@
   }
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .header {
     &__btn--menu {
       display: none;
@@ -54,6 +56,18 @@
 
     &__nav {
       display: flex;
+    }
+
+    &__right {
+      flex: 1;
+
+      .header__btn--search { order: 1; }
+      .header__btn--plus { order: 2; }
+      .header__btn--history { display: none; }
+      .header__btn--bell {
+        order: 3;
+        margin-left: auto;
+      }
     }
   }
 }
