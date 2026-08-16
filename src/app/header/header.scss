@@ -39,9 +39,17 @@
       height: 24px;
     }
 
+    &--bell {
+      position: relative;
+    }
+
     &--avatar {
       display: none;
     }
+  }
+
+  &__badge {
+    display: none;
   }
 
   &__logo-link {
@@ -81,6 +89,25 @@
       &--menu {
         display: none;
       }
+    }
+
+    &__badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1px 4px;
+      border-radius: 10px;
+      background-color: #CC1910;
+      box-shadow: 0 0 0 1px #1074CC;
+      color: #FFFFFF;
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 14px;
+      letter-spacing: 0.1%;
     }
 
     &__nav {
