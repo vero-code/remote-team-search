@@ -6,12 +6,13 @@
     <img src="icons/logo.svg" alt="Логотип" class="header__logo">
   </a>
 
-  <!-- Desktop -->
-   <nav class="header__nav">
+  <nav class="header__nav">
     @for (page of pages; track page.id) {
       <a [href]="page.href" class="header__nav-link">
-        <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
-        <span>{{ page.label }}</span>
+        <span class="header__nav-icon-box">
+          <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
+        </span>
+        <span class="header__nav-text">{{ page.label }}</span>
       </a>
     }
   </nav>
