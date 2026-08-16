@@ -12,4 +12,12 @@ export class Header {
   onSearchClick() {
     this.openSearch.emit();
   }
+
+  pages = [
+    { id: 'links', label: 'Ссылки', icon: 'icons/item.svg', href: '#' },
+    { id: 'contacts', label: 'Контакты', icon: 'icons/item.svg', href: '#' },
+    { id: 'tags', label: 'Теги', icon: 'icons/item.svg', href: '#' },
+    { id: 'favorites', label: 'Избранное', icon: 'icons/item.svg', href: '#' },
+    { id: 'visits', label: 'Посещения', icon: 'icons/item.svg', href: '#' },
+  ]
 }

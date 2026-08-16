@@ -8,13 +8,13 @@
 
   <!-- Desktop -->
    <nav class="header__nav">
-    <a href="#" class="header__nav-link">Ссылки</a>
-    <a href="#" class="header__nav-link">Контакты</a>
-    <a href="#" class="header__nav-link">Теги</a>
-    <a href="#" class="header__nav-link">Избранное</a>
-    <a href="#" class="header__nav-link">Посещения</a>
+    @for (page of pages; track page.id) {
+      <a [href]="page.href" class="header__nav-link">
+        <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
+        <span>{{ page.label }}</span>
+      </a>
+    }
   </nav>
-
 </div>
 <div class="header__right">
   <button type="button" class="header__btn" aria-label="Добавить">
