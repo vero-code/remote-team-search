@@ -31,21 +31,16 @@
       [class]="action.class"
       [aria-label]="action.label"
       (click)="onActionClick(action.id)">
-    <span class="header__icon-box">
-      <img
-        [src]="action.icon"
-        alt=""
-        aria-hidden="true"
-        class="header__icon">
-    </span>
-
-    @if (action.badge) {
-      <span class="header__badge">
-        {{ action.badge }}
+      <span class="header__icon-box">
+        <img [src]="action.icon" alt="" aria-hidden="true" class="header__icon">
       </span>
-    }
-  </button>
+
+      @if (action.badge) {
+        <span class="header__badge">{{ action.badge }}</span>
+      }
+    </button>
   }
+
   <button
     type="button"
     class="header__btn header__btn--avatar"
