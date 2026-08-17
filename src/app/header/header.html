@@ -1,4 +1,4 @@
-<div class="header__left">
+<div class="header__brand">
   <button type="button" class="header__btn header__btn--menu" aria-label="Меню">
     <img src="icons/menu.svg" alt="" aria-hidden="true" class="header__icon">
   </button>
@@ -6,50 +6,43 @@
     <img src="icons/logo.svg" alt="Логотип" class="header__logo">
   </a>
 
-  @if (!isDesktopSearchOpen()) {
-    <nav class="header__nav">
-      @for (page of pages; track page.id) {
-        <a [href]="page.href" class="header__nav-link">
-          <span class="header__nav-icon-box">
-            <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
-          </span>
-          <span class="header__nav-text">{{ page.label }}</span>
-        </a>
-      }
-    </nav>
-  } @else {
-    <div class="header__search-inline">
-      <input
-        type="search"
-        class="header__search-input"
-        placeholder="Поиск..."
-        autofocus>
-    </div>
-  }
+  <nav class="header__nav">
+    @for (page of pages; track page.id) {
+      <a [href]="page.href" class="header__nav-link">
+        <span class="header__nav-icon-box">
+          <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
+        </span>
+        <span class="header__nav-text">{{ page.label }}</span>
+      </a>
+    }
+  </nav>
 </div>
-<div class="header__right">
-  <button type="button" class="header__btn header__btn--plus" aria-label="Добавить">
+<div class="header__actions">
+  @for (action of actions; track action.id) {
+    <button
+      type="button"
+      [class]="action.class"
+      [aria-label]="action.label"
+      (click)="onActionClick(action.id)">
     <span class="header__icon-box">
-      <img src="icons/add.svg" alt="" aria-hidden="true" class="header__icon">
+      <img
+        [src]="action.icon"
+        alt=""
+        aria-hidden="true"
+        class="header__icon">
     </span>
+
+    @if (action.badge) {
+      <span class="header__badge">
+        {{ action.badge }}
+      </span>
+    }
   </button>
-  <button type="button" class="header__btn header__btn--history" aria-label="История">
-    <span class="header__icon-box">
-      <img src="icons/history.svg" alt="" aria-hidden="true" class="header__icon">
-    </span>
-  </button>
-  <button type="button" class="header__btn header__btn--search" aria-label="Поиск" (click)="onSearchClick()">
-    <span class="header__icon-box">
-      <img src="icons/search.svg" alt="" aria-hidden="true" class="header__icon">
-    </span>
-  </button>
-  <button type="button" class="header__btn header__btn--bell" aria-label="Уведомления">
-    <span class="header__icon-box">
-      <img src="icons/notifications.svg" alt="" aria-hidden="true" class="header__icon">
-    </span>
-    <span class="header__badge">32</span>
-  </button>
-  <button type="button" class="header__btn header__btn--avatar" aria-label="Профиль">
+  }
+  <button
+    type="button"
+    class="header__btn header__btn--avatar"
+    aria-label="Профиль">
     <img src="icons/ava.png" alt="" aria-hidden="true" class="header__icon">
   </button>
 </div>

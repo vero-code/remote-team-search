@@ -11,13 +11,13 @@
 }
 
 .header {
-  &__left {
+  &__brand {
     display: flex;
     align-items: center;
     gap: 16px;
   }
 
-  &__right {
+  &__actions {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -146,7 +146,7 @@
       }
     }
 
-    &__right {
+    &__actions {
       flex: 1;
       display: flex;
       align-items: center;
@@ -169,7 +169,7 @@
       }
     }
 
-    &__left {
+    &__brand {
       height: 100%;
     }
   }
