@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, model, output } from '@angular/core';
 import { Search } from '../search/search';
 
 @Component({
@@ -8,15 +8,13 @@ import { Search } from '../search/search';
   styleUrl: './header.scss',
 })
 export class Header {
-  isSearchOpen = input<boolean>(false);
+  isSearchOpen = model<boolean>(false);
 
-  openSearch = output<void>();
-  closeSearch = output<void>();
   openFilters = output<void>();
 
   onActionClick(id: string) {
     if (id === 'search') {
-      this.openSearch.emit();
+      this.isSearchOpen.update(v => !v);
     }
   }
 

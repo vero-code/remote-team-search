@@ -20,7 +20,7 @@
   } @else {
     <app-search
       (openFilters)="openFilters.emit()"
-      (closeSearch)="closeSearch.emit()"
+      (closeSearch)="isSearchOpen.set(false)"
     />
   }
 </div>

@@ -7,9 +7,7 @@
 
 <app-header
   [class.header-mobile-hidden]="isSearchOpen()"
-  [isSearchOpen]="isSearchOpen()"
-  (openSearch)="isSearchOpen.update(v => !v)"
-  (closeSearch)="isSearchOpen.set(false)"
+  [(isSearchOpen)]="isSearchOpen"
   (openFilters)="isFiltersOpen.set(true)"
 />
 
