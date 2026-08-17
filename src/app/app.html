@@ -1,10 +1,17 @@
 @if (isSearchOpen()) {
-  <app-search 
-    (closeSearch)="closeAll()" 
+  <app-search
+    class="search-mobile-only"
+    (closeSearch)="closeAll()"
     (openFilters)="isFiltersOpen.set(true)"/>
-} @else {
-  <app-header (openSearch)="isSearchOpen.set(true)" />
 }
+
+<app-header
+  [class.header-mobile-hidden]="isSearchOpen()"
+  [isSearchOpen]="isSearchOpen()"
+  (openSearch)="isSearchOpen.update(v => !v)"
+  (closeSearch)="isSearchOpen.set(false)"
+  (openFilters)="isFiltersOpen.set(true)"
+/>
 
 @if (isFiltersOpen()) {
   <app-filters />

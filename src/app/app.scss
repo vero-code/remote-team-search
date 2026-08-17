@@ -1,0 +1,14 @@
+@media (min-width: 1024px) {
+  .search-mobile-only {
+    display: none !important;
+  }
+  .header-mobile-hidden {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-mobile-hidden {
+    display: none !important;
+  }
+}

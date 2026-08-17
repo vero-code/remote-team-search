@@ -6,16 +6,23 @@
     <img src="icons/logo.svg" alt="Логотип" class="header__logo">
   </a>
 
-  <nav class="header__nav">
-    @for (page of pages; track page.id) {
-      <a [href]="page.href" class="header__nav-link">
-        <span class="header__nav-icon-box">
-          <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
-        </span>
-        <span class="header__nav-text">{{ page.label }}</span>
-      </a>
-    }
-  </nav>
+  @if (!isSearchOpen()) {
+    <nav class="header__nav">
+      @for (page of pages; track page.id) {
+        <a [href]="page.href" class="header__nav-link">
+          <span class="header__nav-icon-box">
+            <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
+          </span>
+          <span class="header__nav-text">{{ page.label }}</span>
+        </a>
+      }
+    </nav>
+  } @else {
+    <app-search
+      (openFilters)="openFilters.emit()"
+      (closeSearch)="closeSearch.emit()"
+    />
+  }
 </div>
 <div class="header__actions">
   @for (action of actions; track action.id) {
