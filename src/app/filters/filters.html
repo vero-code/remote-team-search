@@ -1,9 +1,21 @@
 <div class="filters__wrapper">
   <div class="filters__field">
     <label for="author-input" class="filters__label">Автор</label>
-    <input id="author-input" type="text" name="filters" class="filters__input" placeholder="Имя или должность"
-      aria-label="Имя или должность" [value]="author()" (input)="author.set($any($event.target).value)">
-    <button type="button" class="filters__btn filters__btn--me" aria-label="Я" (click)="onMeClick()">
+    <input
+      id="author-input"
+      type="text"
+      name="filters"
+      class="filters__input"
+      placeholder="Имя или должность"
+      aria-label="Имя или должность"
+      [value]="author()"
+      (input)="author.set($any($event.target).value)">
+
+    <button
+      type="button"
+      class="filters__btn filters__btn--me"
+      aria-label="Я"
+      (click)="onMeClick()">
       <img src="icons/me.svg" alt="" aria-hidden="true" class="filters__icon">
     </button>
   </div>
