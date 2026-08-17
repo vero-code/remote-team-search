@@ -18,6 +18,13 @@ export class Header {
     }
   }
 
+  onActionsBgClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('button')) {
+      this.isSearchOpen.set(false);
+    }
+  }
+
   pages = [
     { id: 'links', label: 'Ссылки', icon: 'icons/links.svg', href: '#' },
     { id: 'contacts', label: 'Контакты', icon: 'icons/contacts.svg', href: '#' },
