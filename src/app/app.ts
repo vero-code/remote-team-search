@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Search } from './search/search';
@@ -19,5 +19,10 @@ export class App {
   closeAll() {
     this.isSearchOpen.set(false);
     this.isFiltersOpen.set(false);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    this.closeAll();
   }
 }

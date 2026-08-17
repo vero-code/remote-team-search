@@ -15,4 +15,8 @@
   <app-filters />
 }
 
+@if (isSearchOpen() || isFiltersOpen()) {
+  <div class="backdrop" (click)="closeAll()"></div>
+}
+
 <router-outlet />
