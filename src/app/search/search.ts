@@ -1,4 +1,4 @@
-import { Component, output, signal } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -7,6 +7,7 @@ import { Component, output, signal } from '@angular/core';
   styleUrl: './search.scss',
 })
 export class Search {
+  placeholder = input<string>('Поиск');
   closeSearch = output<void>();
   openFilters = output<void>();
   query = signal('');

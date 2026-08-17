@@ -19,6 +19,7 @@
     </nav>
   } @else {
     <app-search
+      placeholder="Поисковый запрос"
       (openFilters)="openFilters.emit()"
       (closeSearch)="isSearchOpen.set(false)"
     />
