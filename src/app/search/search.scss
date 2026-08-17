@@ -92,12 +92,20 @@
       gap: 0;
     }
 
+    &__input-box {
+      height: 100%;
+    }
+
     &__btn--close {
       display: none;
     }
 
     &__input {
       height: 100%;
+      background-color: #fff;
+      border-radius: 4px;
+      padding-left: 16px;
+      box-sizing: border-box;
     }
   }
 }

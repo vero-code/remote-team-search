@@ -26,19 +26,21 @@
 </div>
 <div class="header__actions" (click)="onActionsBgClick($event)">
   @for (action of actions; track action.id) {
-    <button
-      type="button"
-      [class]="action.class"
-      [aria-label]="action.label"
-      (click)="onActionClick(action.id)">
-      <span class="header__icon-box">
-        <img [src]="action.icon" alt="" aria-hidden="true" class="header__icon">
-      </span>
+    @if (!(isSearchOpen() && action.id === 'search')) {
+      <button
+        type="button"
+        [class]="action.class"
+        [aria-label]="action.label"
+        (click)="onActionClick(action.id)">
+        <span class="header__icon-box">
+          <img [src]="action.icon" alt="" aria-hidden="true" class="header__icon">
+        </span>
 
-      @if (action.badge) {
-        <span class="header__badge">{{ action.badge }}</span>
-      }
-    </button>
+        @if (action.badge) {
+          <span class="header__badge">{{ action.badge }}</span>
+        }
+      </button>
+    }
   }
 
   <button
