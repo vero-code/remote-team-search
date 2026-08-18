@@ -78,11 +78,21 @@
 @media (min-width: 1024px) {
   :host {
     height: 100%;
-    width: 704px;
-    max-width: 100%;
+    width: 0;
+    max-width: 704px;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
     background-color: transparent;
     margin-bottom: 0;
     padding: 0;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+
+    &.header__search-desktop--open {
+      width: 704px;
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 
   .search {

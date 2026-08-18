@@ -10,42 +10,42 @@
     <img src="icons/logo.svg" alt="Логотип" class="header__logo">
   </a>
 
-  @if (!isSearchOpen()) {
-    <nav class="header__nav">
-      @for (page of pages; track page.id) {
-        <a [href]="page.href" class="header__nav-link">
-          <span class="header__nav-icon-box">
-            <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
-          </span>
-          <span class="header__nav-text">{{ page.label }}</span>
-        </a>
-      }
-    </nav>
-  } @else {
-    <app-search
-      placeholder="Поисковый запрос"
-      (openFilters)="openFilters.emit()"
-      (closeSearch)="isSearchOpen.set(false)"
-    />
-  }
+  <nav class="header__nav" [class.header__nav--hidden]="isSearchOpen()">
+    @for (page of pages; track page.id) {
+      <a [href]="page.href" class="header__nav-link">
+        <span class="header__nav-icon-box">
+          <img [src]="page.icon" alt="" aria-hidden="true" class="header__nav-icon">
+        </span>
+        <span class="header__nav-text">{{ page.label }}</span>
+      </a>
+    }
+  </nav>
+
+  <app-search
+    class="header__search-desktop"
+    [class.header__search-desktop--open]="isSearchOpen()"
+    placeholder="Поисковый запрос"
+    (openFilters)="openFilters.emit()"
+    (closeSearch)="isSearchOpen.set(false)"
+  />
 </div>
+
 <div class="header__actions" (click)="onActionsBgClick($event)">
   @for (action of actions; track action.id) {
-    @if (!(isSearchOpen() && action.id === 'search')) {
-      <button
-        type="button"
-        [class]="action.class"
-        [aria-label]="action.label"
-        (click)="onActionClick(action.id)">
-        <span class="header__icon-box">
-          <img [src]="action.icon" alt="" aria-hidden="true" class="header__icon">
-        </span>
+    <button
+      type="button"
+      [class]="action.class"
+      [class.header__btn--search-hidden]="isSearchOpen() && action.id === 'search'"
+      [aria-label]="action.label"
+      (click)="onActionClick(action.id)">
+      <span class="header__icon-box">
+        <img [src]="action.icon" alt="" aria-hidden="true" class="header__icon">
+      </span>
 
-        @if (action.badge) {
-          <span class="header__badge">{{ action.badge }}</span>
-        }
-      </button>
-    }
+      @if (action.badge) {
+        <span class="header__badge">{{ action.badge }}</span>
+      }
+    </button>
   }
 
   <button
