@@ -221,13 +221,17 @@
         padding-inline: 20px 12px;
         box-sizing: border-box;
         cursor: pointer;
+        transition: background-color 0.15s ease;
+
+        &:hover {
+          background-color: #EFF1F2;
+        }
 
         span {
           display: block;
           width: 184px;
           height: 20px;
           line-height: 20px;
-          background-color: #FFFFFF;
           font-family: 'Roboto', sans-serif;
           font-size: 14px;
           font-weight: 400;
