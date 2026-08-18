@@ -78,10 +78,11 @@
 @media (min-width: 1024px) {
   :host {
     height: 100%;
+    width: 704px;
+    max-width: 100%;
     background-color: transparent;
     margin-bottom: 0;
     padding: 0;
-    flex: 1;
   }
 
   .search {
