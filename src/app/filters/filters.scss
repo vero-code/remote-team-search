@@ -181,7 +181,7 @@
       width: 487px;
       display: flex;
       flex-direction: column;
-      padding: 16px 20px;
+      padding: 24px;
       box-sizing: border-box;
     }
 
@@ -192,6 +192,31 @@
 
     &__item {
       height: auto;
+      padding-inline: 0;
+      gap: 8px;
+    }
+
+    &__field {
+      margin-bottom: 16px;
+    }
+
+    &__group + &__group {
+      margin-top: 20px;
+      gap: 4px;
+    }
+
+    &__checkbox {
+      position: static;
+      opacity: 1;
+      width: 18px;
+      height: 18px;
+      margin: 3px;
+      cursor: pointer;
+      accent-color: #1074CC;
+    }
+
+    &__icon-box {
+      display: none;
     }
   }
 }
