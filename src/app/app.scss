@@ -20,7 +20,9 @@
   background: transparent;
 }
 
-app-header {
+app-header,
+app-search,
+app-filters {
   position: relative;
   z-index: 20;
 }
