@@ -13,6 +13,15 @@ export class Filters {
     this.author.set('Я');
   }
 
+  history = [
+    'закрепить теги',
+    'кнопка',
+    'приложение',
+    'форма',
+    'текстовое поле',
+    'выпадающий список',
+  ];
+
   options = [
     { id: 'participant', label: 'Я участник', icon: 'icons/item.svg' },
     { id: 'inHeaders', label: 'В заголовках', icon: 'icons/item.svg' },

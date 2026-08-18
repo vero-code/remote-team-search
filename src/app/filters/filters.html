@@ -2,7 +2,11 @@
   <div class="filters__history">
     <span class="filters__history-title">История</span>
     <ul class="filters__history-list">
-      <li class="filters__history-item">Пример</li>
+      @for (item of history; track item) {
+        <li class="filters__history-item">
+          <span>{{ item }}</span>
+        </li>
+      }
     </ul>
   </div>
 
