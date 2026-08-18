@@ -167,5 +167,31 @@
       height: 100%;
       margin-inline: 0;
     }
+
+    &__history {
+      display: flex;
+      width: 216px;
+      flex-shrink: 0;
+      padding: 16px 0 0 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #E1E4E6;
+    }
+
+    &__content {
+      width: 487px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px 20px;
+      box-sizing: border-box;
+    }
+
+    &__list {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    &__item {
+      height: auto;
+    }
   }
 }
