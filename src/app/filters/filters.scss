@@ -139,3 +139,25 @@
     margin: 0;
   }
 }
+
+@media (min-width: 1024px) {
+  :host {
+    display: block;
+    position: absolute;
+    top: 54px;
+    left: 182px;
+    width: 704px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
+    z-index: 30;
+    box-sizing: border-box;
+  }
+
+  .filters {
+    &__wrapper {
+      margin-inline: 0;
+      padding: 16px;
+    }
+  }
+}
