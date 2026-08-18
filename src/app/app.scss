@@ -11,6 +11,13 @@
   .header-mobile-hidden {
     display: none !important;
   }
+
+  app-header,
+  app-search,
+  app-filters {
+    position: relative;
+    z-index: 20;
+  }
 }
 
 .backdrop {
@@ -20,9 +27,7 @@
   background: transparent;
 }
 
-app-header,
-app-search,
-app-filters {
+app-header {
   position: relative;
   z-index: 20;
 }
