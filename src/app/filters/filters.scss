@@ -284,6 +284,15 @@
       gap: 4px;
     }
 
+    &__group:not(:last-child) {
+      .filters__item:nth-child(2) {
+        order: 3;
+      }
+      .filters__item:nth-child(3) {
+        order: 2;
+      }
+    }
+
     &__checkbox {
       position: static;
       opacity: 1;
