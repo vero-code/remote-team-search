@@ -1,59 +1,76 @@
-# RemoteTeamSearch
+# Remote Team Search
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+<p align="left">
+  <img src="https://img.shields.io/badge/Angular-19+-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular" />
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/SCSS-BEM-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS" />
+  <img src="https://img.shields.io/badge/Design-Pixel--Perfect-1074CC?style=for-the-badge&logo=figma&logoColor=white" alt="Pixel Perfect" />
+</p>
 
-## Development server
+An animated and responsive web application header featuring an expanding search bar and an interactive search filters dropdown, built with **Angular 19+** and **SCSS (BEM)**.
 
-To start a local development server, run:
+## ✨ Features
 
-```bash
-ng serve
-```
+- **Pixel-Perfect Responsive Layout:**
+  - **Mobile (414px):** Optimized view with a full-screen search input, back button navigation, and a vertical filter checklist.
+  - **Desktop (1440px):** Brand navigation bar with smooth expansion animations and a multi-column filter popup.
+  - Full adherence to Figma design specifications (typography, exact pixel dimensions, color palette, shadows, and vector icons).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Hardware-Accelerated Expand Animation:**
+  - Desktop search expands smoothly to 704px using CSS cubic-bezier transitions (`cubic-bezier(0.4, 0, 0.2, 1)`) while gracefully collapsing navigation links without layout shifting.
+  - Mobile search smoothly transitions into a focused header with an instant clear button.
 
-## Code scaffolding
+- **Interactive Search Filters Dropdown:**
+  - Automatically reveals the filters panel upon search input focus.
+  - **Search History Column (Desktop):** Recent search queries with smooth hover effects and a bottom gradient fade-out mask.
+  - **Author Filter Field:** Text input with an instant "Я" (Me) preset selector.
+  - **Filter Checkboxes:** Structured option groups with customized checkboxes, maintaining dedicated layout orders for mobile and desktop views.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Seamless User Experience:**
+  - Close on backdrop click (outside click detection).
+  - Close on `Escape` keypress.
+  - Fast rendering and reactive state management powered by **Angular Signals**.
 
-```bash
-ng generate component component-name
-```
+## 🏗 Component Architecture
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The application is structured into decoupled, reusable Standalone Components:
 
-```bash
-ng generate --help
-```
+- **`App` (`<app-root>`)** — Orchestrates top-level application state using Angular Signals (`isSearchOpen`, `isFiltersOpen`), manages the global `.backdrop` overlay, and handles document-level keydown events (`Escape`).
+- **`Header` (`<app-header>`)** — Main navigation bar containing the logo, navigation links, notification badge, action buttons, and animated search trigger.
+- **`Search` (`<app-search>`)** — Dedicated search input component supporting desktop animated expansion and mobile full-screen views.
+- **`Filters` (`<app-filters>`)** — Dropdown panel presenting search history, author filtering, and categorized checkbox options.
 
-## Building
+## 🛠 Tech Stack
 
-To build the project run:
+- **Framework:** Angular 19+ (Standalone Components, Signals, new Control Flow `@if` / `@for`, Output API).
+- **Styling:** SCSS, BEM Methodology, CSS Variables, Flexbox, Hardware-accelerated Transitions.
+- **Typography:** Google Fonts (Roboto 400, 500, 700).
 
-```bash
-ng build
-```
+## 🚀 Getting Started
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Prerequisites
 
-## Running unit tests
+- [Node.js](https://nodejs.org/) (version 18+ or 20+ recommended)
+- [npm](https://www.npmjs.com/)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Installation
 
-```bash
-ng test
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vero-code/remote-team-search.git
+   cd remote-team-search
+   ```
 
-## Running end-to-end tests
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-For end-to-end (e2e) testing, run:
+3. Start the development server:
+   ```bash
+   npm start
+   # or
+   ng serve
+   ```
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Open [http://localhost:4200/](http://localhost:4200/) in your browser.
