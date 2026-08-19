@@ -16,10 +16,6 @@
     
     &:last-child {
       gap: 4px;
-
-      .filters__list {
-        gap: 4px;
-      }
     }
   }
 
@@ -251,17 +247,36 @@
 
     &__list {
       flex-direction: row;
-      gap: 20px;
+      gap: 8px;
     }
 
     &__item {
-      height: auto;
-      padding-inline: 0;
+      display: flex;
+      align-items: center;
+      height: 36px;
+      padding: 6px 12px;
+      box-sizing: border-box;
       gap: 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      white-space: nowrap;
+
+      &-text{
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        color: #2A3033;
+      }
     }
 
     &__field {
       margin-bottom: 16px;
+    }
+
+    &__group {
+      align-self: flex-start;
     }
 
     &__group + &__group {
