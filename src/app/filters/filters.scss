@@ -16,8 +16,9 @@ $font-family-base:       'Roboto', sans-serif;
   &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     margin-inline: 16px;
+    padding-top: 24px;
+    gap: 20px;
   }
 
   &__content {
@@ -179,6 +180,7 @@ $font-family-base:       'Roboto', sans-serif;
       flex-direction: row;
       height: 100%;
       margin-inline: 0;
+      padding-top: 0;
       gap: 0;
     }
 
