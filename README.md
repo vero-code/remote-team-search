@@ -74,3 +74,7 @@ The application is structured into decoupled, reusable Standalone Components:
    ```
 
 4. Open [http://localhost:4200/](http://localhost:4200/) in your browser.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
